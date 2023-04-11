@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace EaAppFrameWork.Driver;
 
-public class DriverFixture : IDriverFixture//, IDisposable
+public class DriverFixture : IDriverFixture, IDisposable
 {
     private readonly TestSettings _testSettings;
     public IWebDriver Driver { get; }
@@ -32,10 +32,10 @@ public class DriverFixture : IDriverFixture//, IDisposable
         };
     }
 
-/*    public void Dispose()
+    public void Dispose()
     {
         Driver.Dispose();
-    }*/
+    }
 }
 
 public enum BrowserType
